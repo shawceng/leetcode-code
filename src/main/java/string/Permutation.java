@@ -1,7 +1,5 @@
 package string;
 
-import com.sun.jdi.ArrayReference;
-
 import java.util.*;
 
 public class Permutation {
@@ -69,6 +67,27 @@ public class Permutation {
             char t = chars[i];
             chars[i] = chars[to - i + from - 1];
             chars[to - i + from - 1] = t;
+        }
+    }
+
+    public String[] permutationAny(String s) {
+        ArrayList<String> result = new ArrayList<>();
+        char chars[] = s.toCharArray();
+        Arrays.sort(chars);
+
+        dfsAny(result, chars, new char[chars.length], 0);
+        return result.toArray(new String[result.size()]);
+    }
+
+    public void dfsAny(ArrayList<String> result, char[] chars, char[] res, int pos) {
+        if (pos == res.length) {
+            result.add(String.valueOf(res));
+            return;
+        }
+
+        for (int i = 0; i < chars.length; i++) {
+            res[pos] = chars[i];
+            dfsAny(result, chars, res, pos + 1);
         }
     }
 }

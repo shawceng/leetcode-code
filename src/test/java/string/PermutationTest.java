@@ -3,7 +3,7 @@ package string;
 public class PermutationTest {
     public static void main(String[] args) {
         Permutation p = new Permutation();
-        String result[] = p.permutationDict("129876");
+        String result[] = p.permutationAny("abc");
         for (String s:
              result) {
 
