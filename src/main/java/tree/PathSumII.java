@@ -8,7 +8,6 @@ public class PathSumII {
         List<List<Integer>> result = new ArrayList<>();
         path(root, result, new ArrayList<Integer>(), targetSum);
         return result;
-
     }
 
     public void path(TreeNode root, List<List<Integer>> result, List<Integer> res, int targetSum) {
