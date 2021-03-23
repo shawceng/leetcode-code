@@ -2,27 +2,29 @@ package lcof;
 
 public class ReversePairs {
     public int reversePairs(int[] nums) {
-        if (nums.length == 0) return 0;
-        int[] map = new int[nums.length];
-        for (int i = nums.length - 2; i >= 0; i--) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    if (map[j] == nums.length - i - 1) {
-                        map[i] += map[j] + 1;
-                        break;
-                    }
-                    map[i]++;
-                } else if (nums[i] == nums[j]) {
-                    map[i] += map[j];
-                    break;
-                }
+        int[] copy = new int[nums.length];
+        return mergeCount(nums, 0, nums.length, copy);
+    }
+
+    int mergeCount(int[] nums, int from, int to, int[] copy) {
+        if (from >= to - 1) return 0;
+        int mid = from + (to - from) / 2;
+        int ret = mergeCount(nums, from, mid, copy) + mergeCount(nums, mid, to, copy);
+
+        int lptr = from, rptr = mid;
+        int cnt = 0;
+        int i = from;
+        while (lptr < mid) {
+            if (rptr == to || nums[lptr] <= nums[rptr]) {
+                copy[i++] = nums[lptr++];
+                cnt += rptr - mid;
+            } else {
+                copy[i++] = nums[rptr++];
             }
         }
-        int count = 0;
-        for (int e:
-             map) {
-            count += e;
+        for (int j = from; j < i; j++) {
+            nums[from + j] = copy[j];
         }
-        return count;
+        return ret + cnt;
     }
 }
