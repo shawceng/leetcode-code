@@ -1,5 +1,6 @@
 package array;
 
+
 public class CandyTest {
     public static void main(String[] args) {
         Candy candy = new Candy();
