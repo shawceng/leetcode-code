@@ -15,7 +15,7 @@ public class FlattenBinaryTreeToLinkedList {
             if (p.left != null) {
                 p.right = p.left;
                 p.left = null;
-            } else if (!stack.isEmpty()){
+            } else if (!stack.isEmpty()) {
                 p.right = stack.pop();
             }
             p = p.right;

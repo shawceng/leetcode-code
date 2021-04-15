@@ -4,8 +4,8 @@ public class ConstructArr {
     public int[] constructArr(int[] a) {
         int val = 1;
         boolean hasZero = false;
-        for (int e:
-             a) {
+        for (int e :
+                a) {
             if (e == 0 && !hasZero)
                 hasZero = true;
             else

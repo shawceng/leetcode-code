@@ -5,7 +5,8 @@ public class ReorderList {
         if (head == null || head.next == null) return;
 
         ListNode slow, fast;
-        for (slow = head, fast = head.next; fast != null && fast.next != null; fast = fast.next.next, slow = slow.next);
+        for (slow = head, fast = head.next; fast != null && fast.next != null; fast = fast.next.next, slow = slow.next)
+            ;
 
         fast = reverse(slow.next);
         slow.next = null;

@@ -11,8 +11,8 @@ public class ValidSudoku {
                 if (board[i][j] != '.') {
                     int val = 1 << (board[i][j] - '1');
                     if ((col[j] & val) != 0
-                        || (row[i] & val) != 0
-                        || (group[i / 3 * 3 + j / 3] & val) != 0)
+                            || (row[i] & val) != 0
+                            || (group[i / 3 * 3 + j / 3] & val) != 0)
                         return false;
                     col[j] |= val;
                     row[i] |= val;

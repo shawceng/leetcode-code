@@ -6,8 +6,8 @@ public class EvaluateReversePolishNotation {
     public int evalRPN(String[] tokens) {
         int[] stack = new int[tokens.length];
         int top = 0;
-        for (String each:
-             tokens) {
+        for (String each :
+                tokens) {
             if (is_operator(each)) {
                 int a = stack[--top];
                 if (each.equals("+")) stack[top - 1] += a;

@@ -62,7 +62,7 @@ public class ScrambleString {
                     && isScramble(s1, s2, from + step, to, from2 + step, to2))
                     || (isScramble(s1, s2, from, from + step, from2 + step2, to2)
                     && isScramble(s1, s2, from + step, to, from2, from2 + step2)))
-                    return true;
+                return true;
         }
 
         return false;

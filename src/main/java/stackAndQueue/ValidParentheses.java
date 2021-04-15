@@ -12,8 +12,8 @@ public class ValidParentheses {
         map.put(']', '[');
         map.put('}', '{');
         ArrayList<Character> stack = new ArrayList<>();
-        for (char c:
-             s.toCharArray()) {
+        for (char c :
+                s.toCharArray()) {
             if (map.containsValue(c))
                 stack.add(c);
             else if (stack.size() > 0 && map.get(c) == stack.indexOf(stack.size() - 1))

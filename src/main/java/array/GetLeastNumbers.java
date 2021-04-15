@@ -47,7 +47,7 @@ public class GetLeastNumbers {
 
     public int[] getLeastNumbersQuickSelect(int[] arr, int k) {
         if (arr.length == 0 || k == 0) return new int[0];
-        if (arr.length == k) return  arr;
+        if (arr.length == k) return arr;
         int pivot = 0;
         int from = 0, to = arr.length - 1;
         while (pivot != k) {
@@ -72,8 +72,8 @@ public class GetLeastNumbers {
         int j = hi + 1;
         int v = a[lo];
         while (i < j) {
-            while (a[++i] < v && i < hi);
-            while (a[--j] > v && j > lo);
+            while (a[++i] < v && i < hi) ;
+            while (a[--j] > v && j > lo) ;
 
             if (i < j) {
                 swap(a, i, j);

@@ -9,8 +9,8 @@ public class WordBreak {
         int m = s.length();
         Set<String> set = new HashSet<>();
         int min = Integer.MAX_VALUE, max = 0;
-        for (String e:
-             wordDict) {
+        for (String e :
+                wordDict) {
             set.add(e);
             min = Math.min(min, e.length());
             max = Math.max(max, e.length());

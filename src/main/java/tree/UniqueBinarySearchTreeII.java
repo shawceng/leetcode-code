@@ -14,10 +14,10 @@ public class UniqueBinarySearchTreeII {
         for (int i = from; i <= to; i++) {
             List<TreeNode> lefts = generate(from, i - 1);
             List<TreeNode> rights = generate(i + 1, to);
-            for (TreeNode left:
-                 lefts) {
-                for (TreeNode right:
-                     rights) {
+            for (TreeNode left :
+                    lefts) {
+                for (TreeNode right :
+                        rights) {
                     res.add(new TreeNode(i, left, right));
                 }
             }

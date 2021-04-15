@@ -18,7 +18,7 @@ public class RegularExpressionMatching {
         if (start2 < p.length - 1 && p[start2 + 1] == '*') {
             return isMatch(s, p, start1, start2 + 2)
                     || ((p[start2] == s[start1] || p[start2] == '.')
-                            && (isMatch(s, p, start1 + 1, start2) || isMatch(s, p, start1 + 1, start2 + 2)));
+                    && (isMatch(s, p, start1 + 1, start2) || isMatch(s, p, start1 + 1, start2 + 2)));
         } else {
             return (p[start2] == '.' || p[start2] == s[start1])
                     && isMatch(s, p, start1 + 1, start2 + 1);

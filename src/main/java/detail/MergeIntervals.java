@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         ArrayList<int[]> list = new ArrayList<>();
-        for (int[] interval:
-             intervals) {
+        for (int[] interval :
+                intervals) {
             int left = interval[0];
             int right = interval[1];
             boolean placed = false;
             ArrayList<int[]> t = new ArrayList<>();
-            for (int[] e:
-                 list) {
+            for (int[] e :
+                    list) {
                 if (left > e[1]) {
                     t.add(e);
                 } else if (right < e[0]) {

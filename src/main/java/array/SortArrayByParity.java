@@ -6,7 +6,7 @@ public class SortArrayByParity {
         int from = 0, to = A.length - 1;
 
         while (from < to) {
-            while (from < to && (A[from] & 1) == 0) from ++;
+            while (from < to && (A[from] & 1) == 0) from++;
             while (from < to && (A[to] & 1) == 1) to--;
             swap(A, from, to);
         }

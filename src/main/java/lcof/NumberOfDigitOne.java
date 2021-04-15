@@ -2,6 +2,7 @@ package lcof;
 
 public class NumberOfDigitOne {
     int[] f = new int[12];
+
     public int countDigitOne(int n) {
         if (n == 0) return 0;
         if (n < 10) return 1;

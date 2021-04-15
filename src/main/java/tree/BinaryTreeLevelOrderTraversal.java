@@ -15,7 +15,7 @@ public class BinaryTreeLevelOrderTraversal {
                 TreeNode node = queue.pop();
                 r.add(node.val);
                 if (node.left != null) queue2.add(node.left);
-                if (node.right!= null) queue2.add(node.right);
+                if (node.right != null) queue2.add(node.right);
             }
             res.add(r);
             LinkedList t = queue;

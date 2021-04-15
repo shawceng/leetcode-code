@@ -5,8 +5,8 @@ public class MaximumProductSubarray {
         if (nums.length == 1) return nums[0];
         int pri = 0, neg = 0;
         int ret = 0;
-        for (int e:
-             nums) {
+        for (int e :
+                nums) {
             if (e == 0) {
                 pri = 0;
                 neg = 0;

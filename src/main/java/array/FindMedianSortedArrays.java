@@ -7,7 +7,7 @@ public class FindMedianSortedArrays {
             return findKth(nums1, 0, nums2, 0, total / 2);
         else
             return ((double) findKth(nums1, 0, nums2, 0, total / 2) +
-                + findKth(nums1, 0, nums2, 0, total / 2 - 1)) / 2;
+                    +findKth(nums1, 0, nums2, 0, total / 2 - 1)) / 2;
     }
 
     public static int findKth(int[] A, int m, int[] B, int n, int k) {

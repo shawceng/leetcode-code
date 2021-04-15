@@ -7,7 +7,7 @@ public class LongestValidParentheses {
     public int longestValidParentheses(String s) {
         int[] f = new int[s.length() + 1];
         int max = 0;
-        for (int i = s.length() - 2; i >=0; i--) {
+        for (int i = s.length() - 2; i >= 0; i--) {
             if (s.charAt(i) != '(') continue;
             int matched = i + f[i + 1] + 1;
             if (matched < s.length() && s.charAt(matched) == ')')
@@ -55,7 +55,8 @@ public class LongestValidParentheses {
             }
         }
 
-        depth = 0; start = s.length();
+        depth = 0;
+        start = s.length();
         for (int i = s.length() - 1; i >= 0; i--) {
             if (s.charAt(i) == ')') {
                 ++depth;

@@ -7,8 +7,8 @@ public class InsertInterval {
         int left = newInterval[0], right = newInterval[1];
         ArrayList<int[]> list = new ArrayList<>();
         boolean placed = false;
-        for (int[] e:
-             intervals) {
+        for (int[] e :
+                intervals) {
             if (e[1] < left) {
                 list.add(e);
             } else if (e[0] > right) {

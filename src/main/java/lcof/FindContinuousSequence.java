@@ -24,6 +24,6 @@ public class FindContinuousSequence {
                 sum -= from++;
             }
         }
-       return res.toArray(new int[res.size()][]);
+        return res.toArray(new int[res.size()][]);
     }
 }

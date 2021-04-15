@@ -10,8 +10,8 @@ public class PermutationsII {
 
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> res = new ArrayList<>();
-        for (int e:
-             nums) {
+        for (int e :
+                nums) {
             res.add(e);
         }
         do {

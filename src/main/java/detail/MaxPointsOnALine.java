@@ -18,8 +18,8 @@ public class MaxPointsOnALine {
                     k = ((double) p1[0] - p2[0]) / (p1[1] - p2[1]);
                 map.put(k, map.getOrDefault(k, 0) + 1);
             }
-            for (int v:
-                 map.values()) {
+            for (int v :
+                    map.values()) {
                 ret = Math.max(ret, v + 1);
             }
         }

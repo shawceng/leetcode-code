@@ -9,6 +9,7 @@ import java.util.Map;
 
 public class RebuildBinaryTree {
     Map<Integer, Integer> map;
+
     public TreeNode buildTree(int[] preorder, int[] inorder) {
         map = new HashMap<>();
         for (int i = 0; i < inorder.length; i++) {

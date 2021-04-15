@@ -13,7 +13,7 @@ public class TranslateNumbers {
             return 1;
         }
         int ret = 0;
-        if (num.charAt(level) ==  '1'
+        if (num.charAt(level) == '1'
                 || (num.charAt(level) == '2'
                 && level + 1 < num.length()
                 && num.charAt(level + 1) < '6')) {

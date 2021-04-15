@@ -7,8 +7,8 @@ public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> res = new ArrayList<>();
-        for (int e:
-             nums) {
+        for (int e :
+                nums) {
             res.add(e);
         }
         dfs(result, res, 0, nums.length);

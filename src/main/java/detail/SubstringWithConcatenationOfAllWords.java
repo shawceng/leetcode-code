@@ -10,8 +10,8 @@ public class SubstringWithConcatenationOfAllWords {
         if (s.isEmpty()) return ret;
 
         HashMap<String, Integer> ori = new HashMap<>();
-        for (String e:
-             words) {
+        for (String e :
+                words) {
             ori.put(e, ori.getOrDefault(e, 0) + 1);
         }
 

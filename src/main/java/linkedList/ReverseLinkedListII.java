@@ -6,7 +6,7 @@ public class ReverseLinkedListII {
         ListNode dummy = new ListNode(0, head);
 
         head = dummy;
-        for (int i = 0; i < m - 1; i++, head = head.next);
+        for (int i = 0; i < m - 1; i++, head = head.next) ;
 
         ListNode pre = head, p = head.next, q = p.next;
 

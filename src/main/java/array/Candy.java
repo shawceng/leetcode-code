@@ -16,15 +16,15 @@ public class Candy {
             }
         }
 
-        for (int i = l - 2; i >= 0 ; i--) {
+        for (int i = l - 2; i >= 0; i--) {
             if (ratings[i] > ratings[i + 1]) {
                 increment[i] = Math.max(increment[i + 1] + 1, increment[i]);
             }
         }
 
         int sum = 0;
-        for (int each:
-             increment) {
+        for (int each :
+                increment) {
             sum += each;
         }
         return sum;
