@@ -4,13 +4,13 @@ public class ReverseLeftWords {
     public String reverseLeftWords(String s, int n) {
         char str[] = s.toCharArray();
         int l = str.length;
-        while(n > 0) {
+        while (n > 0) {
             char t = str[0];
-            for (int i = 0; i < l - 1; i ++){
+            for (int i = 0; i < l - 1; i++) {
                 str[i] = str[i + 1];
             }
             str[l - 1] = t;
-            n --;
+            n--;
         }
         return String.valueOf(str);
     }

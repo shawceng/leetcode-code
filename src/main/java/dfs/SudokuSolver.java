@@ -26,9 +26,9 @@ public class SudokuSolver {
         for (int k = 0; k < 9; k++) {
             if (((val >> k) & 1) == 1) continue;
             board[i][j] = (char) ('1' + k);
-            setVal(board, rows, cols, groups, i, j,  k, 1);
+            setVal(board, rows, cols, groups, i, j, k, 1);
             boolean b = solve(board, rows, cols, groups, n + 1);
-            setVal(board, rows, cols, groups, i, j,  k, -1);
+            setVal(board, rows, cols, groups, i, j, k, -1);
             if (b) return true;
             board[i][j] = '.';
         }

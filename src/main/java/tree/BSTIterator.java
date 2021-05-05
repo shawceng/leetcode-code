@@ -6,6 +6,7 @@ public class BSTIterator {
 
     Stack<TreeNode> stack;
     TreeNode p;
+
     public BSTIterator(TreeNode root) {
         stack = new Stack();
         if (root != null)

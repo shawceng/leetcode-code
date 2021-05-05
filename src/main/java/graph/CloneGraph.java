@@ -14,7 +14,7 @@ public class CloneGraph {
         if (!map.containsKey(node)) {
             Node newNode = new Node(node.val);
             map.put(node, newNode);
-            for (Node e: node.neighbors) {
+            for (Node e : node.neighbors) {
                 newNode.neighbors.add(clone(e, map));
             }
         }

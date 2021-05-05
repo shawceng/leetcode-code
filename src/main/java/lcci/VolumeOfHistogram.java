@@ -4,10 +4,6 @@ public class VolumeOfHistogram {
     public int trap(int[] height) {
 
 
-
-
-
-
         int heightest = 0;
         for (int i = 0; i < height.length; i++) {
             heightest = height[heightest] < height[i] ? i : heightest;

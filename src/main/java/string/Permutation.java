@@ -44,11 +44,11 @@ public class Permutation {
 
     public void nextPermutation(List<String> result, char[] chars) {
         int i, j;
-        for (i = chars.length - 2; (i >= 0) && (chars[i] >= chars[i + 1]); i--);
+        for (i = chars.length - 2; (i >= 0) && (chars[i] >= chars[i + 1]); i--) ;
 
         if (i == -1) return;
 
-        for (j = chars.length - 1; (j > i) && (chars[j] <= chars[i]); j--);
+        for (j = chars.length - 1; (j > i) && (chars[j] <= chars[i]); j--) ;
 
         char t = chars[i];
         chars[i] = chars[j];

@@ -9,6 +9,7 @@ public class RemoveInvalidParentheses {
     int deleted;
     Set<String> res;
     StringBuilder path;
+
     public List<String> removeInvalidParentheses(String s) {
         deleted = s.length();
         res = new HashSet<>();

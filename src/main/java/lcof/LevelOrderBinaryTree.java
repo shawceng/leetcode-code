@@ -20,8 +20,8 @@ public class LevelOrderBinaryTree {
         }
         int[] result = new int[ret.size()];
         int i = 0;
-        for (int e:
-             ret) {
+        for (int e :
+                ret) {
             result[i++] = e;
         }
         return result;

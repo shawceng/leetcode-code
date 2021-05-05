@@ -14,7 +14,7 @@ public class LargestRectangleInHistogram {
         for (int i = 0; i < len; ) {
             if (top < 1 || heights[stack[top - 1]] < heights[i]) {
                 stack[top++] = i++;
-            }  else {
+            } else {
                 int tmp = stack[--top];
                 int step = top < 1 ? i : i - stack[top - 1] - 1;
                 max = Math.max(max, step * heights[tmp]);

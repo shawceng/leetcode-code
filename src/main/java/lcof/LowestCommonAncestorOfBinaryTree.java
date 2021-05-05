@@ -4,6 +4,7 @@ import tree.TreeNode;
 
 public class LowestCommonAncestorOfBinaryTree {
     TreeNode node;
+
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         findNode(root, p, q);
         return node;

@@ -24,7 +24,7 @@ public class ValidNumber {
                 || (from > 2 && isDigit(s.charAt(from - 3)));
         return b && (isAllDigit(s, from)
                 || ((s.charAt(from) == '+' || s.charAt(from) == '-')
-                    && isAllDigit(s, from+ 1)));
+                && isAllDigit(s, from + 1)));
     }
 
     private boolean isBeforePoint(String s, int from) {

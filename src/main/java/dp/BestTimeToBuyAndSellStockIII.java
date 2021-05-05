@@ -10,7 +10,7 @@ public class BestTimeToBuyAndSellStockIII {
 
         for (int i = 1, valley = prices[0]; i < len; i++) {
             valley = Math.min(valley, prices[i - 1]);
-            lefts[i] = Math.max(lefts[i -1], prices[i] - valley);
+            lefts[i] = Math.max(lefts[i - 1], prices[i] - valley);
         }
 
         for (int i = len - 2, peak = prices[len - 1]; i >= 0; i--) {

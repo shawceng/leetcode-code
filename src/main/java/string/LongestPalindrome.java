@@ -6,7 +6,7 @@ public class LongestPalindrome {
         int max = 0, start = 0;
         for (int i = 0; i < s.length(); i++) {
             int j = 0;
-            for ( ; (i - j) >= 0 && (i + j) < s.length(); j++) {
+            for (; (i - j) >= 0 && (i + j) < s.length(); j++) {
                 if (s.charAt(i - j) != s.charAt(i + j)) break;
             }
             if (max < j * 2 - 1) {
@@ -48,12 +48,10 @@ public class LongestPalindrome {
         if (dp[i][j] != 0) return dp[i][j];
         if (i == j) {
             dp[i][j] = 1;
-        }
-        else if (s.charAt(i) != s.charAt(j)) {
+        } else if (s.charAt(i) != s.charAt(j)) {
             dp[i][j] = -1;
-        }
-        else if (s.charAt(i) == s.charAt(j)) {
-            int ijVal = dpVal(dp, s, i+1, j-1);
+        } else if (s.charAt(i) == s.charAt(j)) {
+            int ijVal = dpVal(dp, s, i + 1, j - 1);
             if (ijVal == -1) dp[i][j] = -1;
             else dp[i][j] = ijVal + 2;
         }

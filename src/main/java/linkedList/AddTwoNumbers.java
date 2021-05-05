@@ -1,4 +1,5 @@
 package linkedList;
+
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         if (l1.next == null && l1.val == 0) return l2;
@@ -8,7 +9,8 @@ public class AddTwoNumbers {
         int carry = 0, a, b;
 
         while (l1 != null || l2 != null) {
-            a = 0; b = 0;
+            a = 0;
+            b = 0;
             if (l1 != null) {
                 a = l1.val;
                 l1 = l1.next;

@@ -3,7 +3,9 @@ package stackAndQueue;
 import java.util.Stack;
 
 public class MinStack {
-    /** initialize your data structure here. */
+    /**
+     * initialize your data structure here.
+     */
     Stack<Integer> stack, minStack;
 
     public MinStack() {

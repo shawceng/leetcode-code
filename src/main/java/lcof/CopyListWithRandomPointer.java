@@ -1,7 +1,6 @@
 package lcof;
 
 
-
 public class CopyListWithRandomPointer {
     class Node {
         int val;

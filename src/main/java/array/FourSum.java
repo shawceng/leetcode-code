@@ -18,9 +18,9 @@ public class FourSum {
                 if (!map.containsKey(key))
                     map.put(key, new ArrayList<>());
                 map.get(key).add(Arrays.asList(a, b));
-                while (b < nums.length - 2 && nums[++b] == nums[b - 1]);
+                while (b < nums.length - 2 && nums[++b] == nums[b - 1]) ;
             }
-            while (a < nums.length - 3 && nums[++a] == nums[a - 1]);
+            while (a < nums.length - 3 && nums[++a] == nums[a - 1]) ;
         }
 
         int c = 2, d;
@@ -29,8 +29,8 @@ public class FourSum {
             while (d < nums.length) {
                 int key = target - (nums[c] + nums[d]);
                 if (map.containsKey(key)) {
-                    for (List<Integer> each:
-                         map.get(key)) {
+                    for (List<Integer> each :
+                            map.get(key)) {
                         if (each.get(1) >= c)
                             continue;
                         result.add(Arrays.asList(

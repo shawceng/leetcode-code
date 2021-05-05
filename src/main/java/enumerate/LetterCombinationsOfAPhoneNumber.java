@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LetterCombinationsOfAPhoneNumber {
-    private String[] letters = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno","pqrs", "tuv", "wxyz"};
+    private String[] letters = new String[]{"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+
     public List<String> letterCombinations(String digits) {
         List<String> result = new ArrayList<>();
         if (digits.isEmpty()) return result;
@@ -19,8 +20,8 @@ public class LetterCombinationsOfAPhoneNumber {
             return;
         }
         int i = digits.charAt(index) - '0';
-        for (char c:
-             letters[i].toCharArray()) {
+        for (char c :
+                letters[i].toCharArray()) {
             path.append(c);
             conbine(result, path, digits, index + 1);
             path.deleteCharAt(path.length() - 1);

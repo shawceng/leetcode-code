@@ -9,7 +9,7 @@ public class ReverseNodesInkGroup {
         int i;
         ListNode pre = dummy;
         for (ListNode p, cur, next; pre.next != null; pre = cur) {
-            for (i = 0, cur = pre.next, p = cur; i < k && p != null; i++, p = p.next);
+            for (i = 0, cur = pre.next, p = cur; i < k && p != null; i++, p = p.next) ;
             if (i < k && p == null) break;
             // 尾插法
             while (cur.next != p) {

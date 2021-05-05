@@ -8,8 +8,8 @@ public class WordBreakII {
         if (wordDict.size() == 0 || m == 0) return new ArrayList<>();
         Set<String> set = new HashSet<>();
         int min = Integer.MAX_VALUE, max = 0;
-        for (String e:
-             wordDict) {
+        for (String e :
+                wordDict) {
             set.add(e);
             min = Math.min(min, e.length());
             max = Math.max(max, e.length());
